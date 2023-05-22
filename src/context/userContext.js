@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import Keycloak from "keycloak-js";
 
 export const _kc = new Keycloak({
-  url: "http://192.168.2.56:8080/",
+  url: "http://192.168.2.65:8080/",
   clientId: "TodoApp1",
   realm: "keycloak",
 });
