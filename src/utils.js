@@ -1,6 +1,8 @@
+const url = ""
+
 export const fetchTodo = (token, setTodos) => {
   if (!token) return;
-  fetch("http://127.0.0.1:5000/todos/", {
+  fetch(url, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -13,7 +15,7 @@ export const fetchTodo = (token, setTodos) => {
 
 export const AddTodo = (token, message) => {
   const data = { message };
-  fetch("http://127.0.0.1:5000/todos/", {
+  fetch(url, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -25,7 +27,7 @@ export const AddTodo = (token, message) => {
 
 export const deleteTodo = (token, id) => {
   const data = { id };
-  fetch("http://127.0.0.1:5000/todos/", {
+  fetch(url, {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -37,7 +39,7 @@ export const deleteTodo = (token, id) => {
 
 export const updateTodo = (token, id, message) => {
   const data = { message, id };
-  fetch("http://127.0.0.1:5000/todos/", {
+  fetch(url, {
     method: "PUT",
     headers: {
       Authorization: `Bearer ${token}`,
